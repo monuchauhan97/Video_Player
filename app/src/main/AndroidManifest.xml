@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.allformats.video.player.downloader">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
+    <queries>
+        <package android:name="com.instagram.android" />
+        <package android:name="com.facebook.katana" />
+
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="https" />
+        </intent>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService" />
+        </intent>
+    </queries>
+    <queries>
+        <package android:name="com.whatsapp" />
+    </queries>
+    <queries>
+        <package android:name="com.whatsapp.w4b" />
+    </queries>
+
+    <application
+        android:name="com.allformats.video.player.downloader.Vid_player_DS_Helper"
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.VideoPlayer"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.allformats.video.player.downloader.Vid_player_SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.allformats.video.player.downloader.view.Vid_player_DS_SearchVidplayerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name="com.allformats.video.player.downloader.view.Vid_player_PlayerActivity"
+            android:screenOrientation="portrait" />
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.allformats.video.player.downloader.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+
+        <activity
+            android:name="com.allformats.video.player.downloader.privatevideobrowser.Vid_player_MainBrowserActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="m.facebook.com" />
+                <data android:host="www.instagram.com" />
+                <data android:host="instagram.com" />
+                <data android:host="www.dailymotion.com" />
+                <data android:host="dailymotion.com" />
+                <data android:host="vimeo.com" />
+                <data android:host="m.vlive.tv" />
+                <data android:host="www.tumblr.com" />
+                <data android:host="m.twitch.tv" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.allformats.video.player.downloader.privatevideobrowser.insta_downloader.Activity.Vid_player_OpenFileActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.allformats.video.player.downloader.privatevideobrowser.insta_downloader.Activity.Vid_player_PhotosVideoDownloadActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.allformats.video.player.downloader.privatevideobrowser.insta_downloader.Activity.Vid_player_ReelDownlodActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.allformats.video.player.downloader.privatevideobrowser.insta_downloader.Activity.Vid_player_InstaMainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VideoPlayer"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.allformats.video.player.downloader.privatevideobrowser.whatsapp_downloader.Vid_player_ChatStatusSaverActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VideoPlayer" />
+        <activity
+            android:name="com.allformats.video.player.downloader.privatevideobrowser.whatsapp_downloader.Vid_player_VideoPlayerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VideoHome" />
+        <activity
+            android:name="com.allformats.video.player.downloader.privatevideobrowser.whatsapp_downloader.Vid_player_PreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VideoHome" />
+        <activity
+            android:name="com.allformats.video.player.downloader.video_player.Activity.Vid_player_HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VideoHome" />
+        <activity
+            android:name="com.allformats.video.player.downloader.video_player.Activity.Vid_player_MainVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.allformats.video.player.downloader.video_player.Activity.Vid_player_VideolistActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.allformats.video.player.downloader.video_player.Activity.Vid_player_PermissionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name="com.allformats.video.player.downloader.video_player.Activity.Vid_player_VideoPlayerActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:parentActivityName="com.allformats.video.player.downloader.video_player.Activity.Vid_player_MainVideoActivity"
+            android:screenOrientation="sensor"
+            android:theme="@style/FullScreen" />
+
+        <service
+            android:name="com.allformats.video.player.downloader.video_player.Service.VideoPlayAsAudioService"
+            android:enabled="true"
+            android:exported="false"
+            android:label="@string/app_name" />
+
+    </application>
+</manifest>

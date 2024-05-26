@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="blocked_sites">
+        <item>youtube.com</item>
+    </array>
+
+
+    <array name="videourl_filters">
+        <item>mp4</item>
+        <item>vidplayerVideo</item>
+        <item>googleusercontent</item>
+        <item>embed</item>
+    </array>
+</resources>

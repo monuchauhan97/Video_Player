@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/native_ad_container"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/small_native_ad_height"
+    android:gravity="center"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/ad_native_background"
+    app:cardCornerRadius="@dimen/_5sdp"
+    app:cardUseCompatPadding="false"
+    app:cardElevation="0dp" />
+    <!--change app:cardElevation according to your UI item dropShadow(elevation), if you use app:cardElevation value >0 also set app:cardUseCompatPadding value true-->

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#7D3FF2</color>
+    <color name="colorPrimary">#FF6200EE</color>
+    <color name="colorPrimaryDark">#FF3700B3</color>
+
+    <color name="hint_color">#83828C</color>
+    <color name="dialog_background">#2A2838</color>
+
+    <color name="mainBG">#080519</color>
+    <color name="purple_500">#7D3FF2</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+   <!-- <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#ff0400</color>-->
+    <color name="cardview_dark_background">#ff424242</color>
+    <color name="background">#080519</color>
+    <color name="txt_color_new">#8F8E97</color>
+    <color name="transparent">#00000000</color>
+    <color name="cv_color">#201E30</color>
+    <color name="dark_gray">#7f000000</color>
+    <color name="tab_txt_press">#ffffff</color>
+    <color name="red_theam">#ff1700</color>
+    <color name="gray_dark">#707070</color>
+    <color name="light_gray">#c8c8c8</color>
+    <color name="colorPrimaryTextBlack">#df000000</color>
+    <color name="exo_edit_mode_background_color">#fff4f3f0</color>
+    <color name="exo_error_message_background_color">#aa000000</color>
+    <color name="exomedia_default_controls_button_disabled">#ff757575</color>
+    <color name="exomedia_default_controls_button_normal">#ffffffff</color>
+    <color name="exomedia_default_controls_button_pressed">#ffe0e0e0</color>
+
+    <color name="colorWhite">#ffffffff</color>
+
+
+</resources>

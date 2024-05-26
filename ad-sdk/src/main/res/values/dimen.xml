@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="native_ad_height">@dimen/_251sdp</dimen>
+    <dimen name="medium_native_ad_height">@dimen/_109sdp</dimen>
+    <dimen name="small_native_ad_height">@dimen/_55sdp</dimen>
+</resources>

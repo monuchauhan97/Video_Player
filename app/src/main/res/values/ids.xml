@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="text" type="id"/>
+    <item name="search_close_btn" type="id"/>
+    <item name="search_src_text" type="id"/>
+    <item name="home_content" type="id" />
+</resources>

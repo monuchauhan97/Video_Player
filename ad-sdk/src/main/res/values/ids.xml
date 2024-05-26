@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="banner_ad_container" type="id" />
+    <item name="native_ad_container" type="id" />
+
+</resources>

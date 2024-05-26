@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    android:background="@color/bg"
+    android:padding="@dimen/_5sdp">
+
+    <TextView
+        android:id="@+id/tvExitTextTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="Do you want to Exit?"
+        android:textColor="@color/ad_exit_text"
+        android:textSize="@dimen/_16sdp"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvExitTextSubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:text="Please spare a moment to rate and give your valuable feedback to us before leaving."
+        android:textColor="@color/ad_exit_text"
+        android:textSize="@dimen/_13sdp"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvExitTextTitle" />
+
+    <include
+        android:id="@+id/native_ad_container"
+        layout="@layout/ad_layout_native_big"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/native_ad_height"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/tvExitTextSubTitle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvShare"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/bg_round_corner"
+        android:gravity="center"
+        android:fontFamily="@font/poppins_regular"
+        android:includeFontPadding="false"
+        android:paddingHorizontal="@dimen/_45sdp"
+        android:text="Rate App"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/native_ad_container" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvQuit"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@drawable/bg_round_corner"
+        android:backgroundTint="#2A2838"
+        android:gravity="center"
+        android:fontFamily="@font/poppins_regular"
+        android:includeFontPadding="false"
+        android:paddingHorizontal="@dimen/_35sdp"
+        android:text="Yes, Exit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvShare" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
